@@ -6,4 +6,5 @@
 from ._astropy_init import *   # noqa
 # ----------------------------------------------------------------------------
 
-from specreduce.core import *
+if not _ASTROPY_SETUP_:   # noqa
+    from specreduce.core import *   # noqa
